@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      var xhttp = new XMLHttpRequest();
+      console.log(xhttp.readyState);
+      xhttp.open("GET", "MiJson.json");
+      xhttp.onreadystatechange = () => {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          console.log(JSON.parse(xhttp.responseText));
+        }
+      };
+      xhttp.send();
+    </script>
+    <script src="ajax.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="GET">
+      <label for="">Ingrese su cedula</label>
+      <input type="text" name="cedula" />
+      <label for="">Ingrese su nombre</label>
+      <input type="text" name="nombre" />
+      <label for="">Ingrese su apellido</label>
+      <input type="text" name="apellido" />
+      <label for="">Ingrese su direccion</label>
+      <input type="text" name="direccion" />
+      <label for="">Ingrese su telefono</i></label>
+      <input type="text" name="telefono" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

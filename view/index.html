@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="ajax.js"></script>
+    <script src="ready.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-pink-200 w-full">
+    <section class="flex justify-center items-center">
+      <h2 class="text-6xl text-pink-700 font-bold">Estudiantes</h2>
+    </section>
+    <section class="flex justify-center items-center w-full">
+      <div>
+        <form action="" class="w-full flex">
+          <div class="flex flex-col gap-2">
+            <div class="grid">
+              <label for="" class="text-xl text-pink-950"
+                >Ingrese la cedula:</label
+              >
+              <input
+                type="text"
+                id="cedula"
+                name="cedula"
+                required
+                class="border border-pink-800 w-72"
+              />
+            </div>
+            <div class="grid">
+              <label for="" class="text-xl text-pink-950"
+                >Ingrese el nombre:</label
+              >
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                class="border border-pink-800 w-72"
+              />
+            </div>
+            <div class="grid">
+              <label for="" class="text-xl text-pink-950"
+                >Ingrese el apellido:</label
+              >
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+                class="border border-pink-800 w-72"
+              />
+            </div>
+            <div class="grid">
+              <label for="" class="text-xl text-pink-950"
+                >Ingrese la direccion:</label
+              >
+              <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                required
+                class="border border-pink-800 w-72"
+              />
+            </div>
+            <div class="grid">
+              <label for="" class="text-xl text-pink-950"
+                >Ingrese el telefono:</label
+              >
+              <input
+                type="text"
+                id="telefono"
+                name="telefono"
+                required
+                class="border border-pink-800 w-72"
+              />
+            </div>
+          </div>
+          <div class="pt-8 pl-8 grid justify-center items-center gap-4">
+            <button
+              type="submit"
+              class="bg-pink-700 text-white font-bold py-2 px-4 rounded"
+              id="btnCrear"
+            >
+              Crear
+            </button>
+
+            <button
+              type="button"
+              class="bg-pink-700 text-white font-bold py-2 px-4 rounded"
+              id="btnEditar"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="bg-pink-700 text-white font-bold py-2 px-4 rounded"
+              id="btnEliminar"
+            >
+              Eliminar
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="flex justify-center items-center pt-12">
+      <table id="tablaDatos" class="border border-pink-900">
+        <thead class="border border-pink-900 bg-pink-800">
+          <tr>
+            <th class="border border-pink-900 px-8 py-2 text-white">Cedula</th>
+            <th class="border border-pink-900 px-8 py-2 text-white">Nombre</th>
+            <th class="border border-pink-900 px-8 py-2 text-white">
+              Apellido
+            </th>
+            <th class="border border-pink-900 px-8 py-2 text-white">
+              Direccion
+            </th>
+            <th class="border border-pink-900 px-8 py-2 text-white">
+              Telefono
+            </th>
+          </tr>
+        </thead>
+        <tbody class="border border-pink-900"></tbody>
+      </table>
+    </section>
+  </body>
+</html>
